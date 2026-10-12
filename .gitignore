@@ -1,0 +1,16 @@
+# === Артефакты сборки C/C++ ===
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# === Исполняемые файлы из lab2 ===
+lab2/src/revert_string/app_static
+lab2/src/revert_string/app_dynamic
+lab2/src/revert_string/revert_string
+lab2/src/swap/swap
+lab2/src/tests/run_tests
+
+# === Артефакты из lab0 ===
+lab0/src/hello/hello_world
