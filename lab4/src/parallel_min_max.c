@@ -6,8 +6,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
-#include <errno.h>   // Добавлено для errno и EINTR
-#include <time.h>    // Добавлено для nanosleep
+#include <errno.h>  
+#include <time.h>    
 
 #include <sys/time.h>
 #include <sys/types.h>
@@ -18,7 +18,7 @@
 #include "find_min_max.h"
 #include "utils.h"
 
-// Глобальный флаг для обработчика сигнала
+
 static volatile sig_atomic_t timeout_expired = 0;
 static void handle_alarm(int sig) {
   (void)sig;
@@ -33,7 +33,6 @@ int main(int argc, char **argv) {
   bool with_files = false;
 
   while (true) {
-    // Удалена неиспользуемая переменная current_optind
     static struct option options[] = {
         {"seed", required_argument, 0, 0},
         {"array_size", required_argument, 0, 0},
@@ -170,7 +169,6 @@ int main(int argc, char **argv) {
         while (waitpid(-1, &status, 0) > 0) {}
         break;
       }
-      // Заменили usleep на nanosleep для совместимости со стандартами
       struct timespec ts = {0, 10000000L}; // 10 мс
       nanosleep(&ts, NULL);
     } else {
