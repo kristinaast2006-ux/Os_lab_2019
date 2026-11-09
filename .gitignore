@@ -14,3 +14,9 @@ lab2/src/tests/run_tests
 
 # === Артефакты из lab0 ===
 lab0/src/hello/hello_world
+
+# === Артефакты из lab4 ===
+lab4/src/parallel_min_max
+lab4/src/process_memory
+lab4/src/psum
+lab4/src/zombie
