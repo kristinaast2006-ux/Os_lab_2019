@@ -18,7 +18,6 @@
 #include "find_min_max.h"
 #include "utils.h"
 
-
 static volatile sig_atomic_t timeout_expired = 0;
 static void handle_alarm(int sig) {
   (void)sig;
